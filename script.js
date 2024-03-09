@@ -51,10 +51,10 @@ const gameLoop = setInterval(() => {
           allowOutsideClick: false,
           showCancelButton: false,
           showConfirmButton: false,
-          width: 1414,
-          html: `<div style="height: 2000px"></div>`,
+          width: 700,
+          html: `<div style="height: 655px"></div>`,
           color: "#95D5B1",
-          background: "#fff url(images/convite-teste.png)",
+          background: "#fff url(images/diego-janaina.gif)",
           showClass: {
             popup: `
               animate__animated
