@@ -94,7 +94,7 @@ const showInvite = () => {
     width: 700,
     html: `<div style="height: 655px"></div>`,
     color: "#95D5B1",
-    background: "#fff url(images/diego-janaina.gif)",
+    background: "#fff url(images/diogo-iara.gif)",
     showClass: {
       popup: `
         animate__animated
