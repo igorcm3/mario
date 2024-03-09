@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 #game-board {
@@ -35,6 +36,31 @@
     width: 550px;
     position: absolute;
     animation: clouds-animation 20s infinite linear;
+}
+
+.mushroom {
+    width: 150px;
+    position: absolute;
+    bottom: 380px;
+    left: 50%;
+}
+
+.mushroom-animation {
+    animation: mushroom-animation 4s linear forwards;
+}
+
+.counter {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: 440px;
+    left: 49%;
+    z-index: 99;
+}
+
+.counter-number {
+    color: black;
+    font-size: 48px;
 }
 
 @keyframes pipe-animation {
@@ -79,5 +105,22 @@
     to {
         right: 100%;
     }
-    
+
+}
+
+@keyframes mushroom-animation {
+    0% {
+        bottom: 380px;
+        width: 150px;
+    }
+
+    50% {
+        bottom: 100px;
+        width: 250px;
+    }
+
+    100% {
+        bottom: 10px;
+        width: 350px;
+    }
 }
