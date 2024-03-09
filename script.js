@@ -3,6 +3,7 @@ const pipe = document.querySelector(".pipe");
 const PIPE_LEFT_POSITION = 0;
 const PIPE_COLISION = 120;
 const MARIO_COLISION = 80;
+var pipeAnimationCount = 0;
 
 const jump = (event) => {
 
@@ -11,7 +12,7 @@ const jump = (event) => {
     setTimeout(() => {
         mario.classList.remove("jump");
     }, 500);
-  } 
+  }
 };
 
 const gameLoop = setInterval(() => {
@@ -30,7 +31,23 @@ const gameLoop = setInterval(() => {
         mario.style.marginLeft = '50px';
 
         clearInterval(gameLoop);
+
+        setTimeout(() => {
+          const confirmReload = confirm(`Você perdeu, deseja jogar novamente? Score: ${pipeAnimationCount }`);
+          if (confirmReload) {
+            location.reload();
+          } 
+      }, 100);
     }
+
+    if (pipeAnimationCount >= 5 ) {
+        alert('vc ganhou')
+    }
+
 }, 10)
 
 document.addEventListener("keydown", jump);
+
+pipe.addEventListener('animationiteration', function(event) {
+  pipeAnimationCount++;
+});
